@@ -1,6 +1,7 @@
 package ua.task.domain;
 
 import java.util.Date;
+import java.util.List;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,6 +23,8 @@ private String firstName;
 	private String password;
 	
 	private	Date dayOfBirth;
+	
+	private List<TaskDTO> tasks;
 	
 
 }

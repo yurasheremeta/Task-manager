@@ -10,7 +10,11 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 
-
+/*
+ 	"name": "Test",
+		"description": "test",
+		"date": "2018-20-09"
+ */
 public class TaskDTO {
 	
 	private Long id;
@@ -20,6 +24,8 @@ public class TaskDTO {
 	private String description;
 	
 	private Date date;
+	
+	private UserDTO user;
 
 
 }
