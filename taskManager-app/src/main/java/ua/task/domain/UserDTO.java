@@ -6,6 +6,7 @@ import java.util.List;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import ua.task.enums.UserRole;
 @Getter
 @Setter
 @NoArgsConstructor
@@ -25,6 +26,8 @@ private String firstName;
 	private	Date dayOfBirth;
 	
 	private List<TaskDTO> tasks;
+	
+	private UserRole role;
 	
 
 }

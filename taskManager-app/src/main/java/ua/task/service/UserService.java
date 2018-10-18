@@ -19,5 +19,7 @@ public interface UserService {
 	
 	//UserDTO findByUsername(String username);
 	
+	UserDTO findByUsername(String username);
 	
+	 String signin(String username, String password);
 }

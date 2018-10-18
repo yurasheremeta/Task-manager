@@ -4,6 +4,8 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -11,6 +13,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import ua.task.enums.UserRole;
 
 @Getter
 @Setter
@@ -33,5 +36,7 @@ public class UserEntity extends BaseEntity {
 	
 	@OneToMany(mappedBy = "user")
 	private List<TaskEntity> news;
+	@Enumerated(EnumType.STRING)
+	  private UserRole role;
 
 }
