@@ -34,6 +34,12 @@ public class TaskController {
 		List<TaskDTO> dto = taskService.findAllTasks();
 		return new ResponseEntity<List<TaskDTO>>(dto , HttpStatus.OK);
 	}
+	@GetMapping("/{taskId}")
+	public ResponseEntity<TaskDTO> findById(@PathVariable("taskId") Long id){
+		TaskDTO dto = taskService.findById(id);
+		return new ResponseEntity<TaskDTO>(dto , HttpStatus.OK);
+		
+	}
 	@PutMapping("/update/{taskId}")
 	public ResponseEntity<Void> update(@PathVariable("taskId") Long id , @RequestBody TaskDTO dto){
 		TaskDTO dtoFromDB = taskService.findById(id);
